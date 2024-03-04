@@ -48,8 +48,22 @@ for (let i = 0; i < team.length; i++) {
     for (const key in teamMembers) {
 
         // utilizzo console.log per stampare le caratteristiche dei vari oggetti
-        console.log(teamMembers[key]);
+        // console.log(teamMembers[key]);
 
+        // stampare le stesse informazioni su DOM sottoforma di stringhe
+        // creo degli elementi nella DOM dentro i quali stamperò i dati degli oggetti tutto dentro al ciclo for in
+
+        const container = document.querySelector('.container');
+
+        // console.log(container);
+
+        const markupMember = `<p>${teamMembers[key]}</p>`
+
+        container.innerHTML += (markupMember);
     }
 }
+
+
+
+
 
